@@ -1,0 +1,28 @@
+databaseType = "PostgreSql"
+id = "d8646de3-45b7-41a3-b0a2-fe120a15fdd8"
+name = "PersonalFinance"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+  [flyway.check]
+  majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"
+
+[environments."Personal Finance"]
+url = "jdbc:postgresql://localhost:5432/personal_finance"
+schemas = [ "public" ]
+displayName = "HP Victus Personal Finance"
