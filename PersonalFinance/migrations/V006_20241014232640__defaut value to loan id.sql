@@ -1,0 +1,1 @@
+ALTER TABLE transactions.loans ALTER COLUMN id SET DEFAULT nextval('transactions.loans_id_seq');
